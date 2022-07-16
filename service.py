@@ -90,11 +90,11 @@ def init_db():
     """Инициализирует базу данных"""
     db.drop_all()
     db.create_all()
-    with open('data/user.json') as file:
+    with open('data/user.json',  encoding="utf-8") as file:
         insert_data_user(json.load(file))
 
-    with open('data/orders.json') as file:
+    with open('data/orders.json',  encoding="utf-8") as file:
         insert_data_order(json.load(file))
 
-    with open('data/offers.json') as file:
+    with open('data/offers.json',  encoding="utf-8") as file:
         insert_data_offer(json.load(file))
